@@ -1,0 +1,222 @@
+{
+  "config": {
+    "configFile": "D:\\Video\\Alexusadays\\Learn Playwright for QA Automation\\LearnPlaywright\\playwright.config.js",
+    "rootDir": "D:/Video/Alexusadays/Learn Playwright for QA Automation/LearnPlaywright/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "D:/Video/Alexusadays/Learn Playwright for QA Automation/LearnPlaywright/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "D:/Video/Alexusadays/Learn Playwright for QA Automation/LearnPlaywright/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 10000
+      },
+      {
+        "outputDir": "D:/Video/Alexusadays/Learn Playwright for QA Automation/LearnPlaywright/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "D:/Video/Alexusadays/Learn Playwright for QA Automation/LearnPlaywright/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 10000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.41.2",
+    "workers": 8,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "login.spec.js",
+      "file": "login.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "This is a login test @smoke @regression",
+          "ok": false,
+          "tags": [
+            "smoke",
+            "regression"
+          ],
+          "tests": [
+            {
+              "timeout": 0,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "failed",
+                  "duration": 36606,
+                  "error": {
+                    "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n  \u001b[2m- waiting for locator('#username')\u001b[22m\n",
+                    "stack": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n  \u001b[2m- waiting for locator('#username')\u001b[22m\n\n    at D:\\Video\\Alexusadays\\Learn Playwright for QA Automation\\LearnPlaywright\\tests\\login.spec.js:7:37",
+                    "location": {
+                      "file": "D:\\Video\\Alexusadays\\Learn Playwright for QA Automation\\LearnPlaywright\\tests\\login.spec.js",
+                      "column": 37,
+                      "line": 7
+                    },
+                    "snippet": "\u001b[0m \u001b[90m  5 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mpause()\u001b[0m\n\u001b[0m \u001b[90m  6 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  7 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#username'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  8 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#username'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'tomsmith'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m  9 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#password'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[0m\n\u001b[0m \u001b[90m 10 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#password'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'SuperSecretPassword!'\u001b[39m)\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Video\\Alexusadays\\Learn Playwright for QA Automation\\LearnPlaywright\\tests\\login.spec.js",
+                        "column": 37,
+                        "line": 7
+                      },
+                      "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n  \u001b[2m- waiting for locator('#username')\u001b[22m\n\n\n\u001b[0m \u001b[90m  5 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mpause()\u001b[0m\n\u001b[0m \u001b[90m  6 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  7 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#username'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  8 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#username'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'tomsmith'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m  9 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#password'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[0m\n\u001b[0m \u001b[90m 10 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#password'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'SuperSecretPassword!'\u001b[39m)\u001b[0m\n\n\u001b[2m    at D:\\Video\\Alexusadays\\Learn Playwright for QA Automation\\LearnPlaywright\\tests\\login.spec.js:7:37\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-06-01T07:26:20.557Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\Video\\Alexusadays\\Learn Playwright for QA Automation\\LearnPlaywright\\test-results\\login-This-is-a-login-test-smoke-regression-chromium\\video.webm"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Video\\Alexusadays\\Learn Playwright for QA Automation\\LearnPlaywright\\tests\\login.spec.js",
+                    "column": 37,
+                    "line": 7
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "badc1754af1944f68b2b-3524ac0e91159138198c",
+          "file": "login.spec.js",
+          "line": 3,
+          "column": 6
+        },
+        {
+          "title": "This is a login test @smoke @regression",
+          "ok": false,
+          "tags": [
+            "smoke",
+            "regression"
+          ],
+          "tests": [
+            {
+              "timeout": 0,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "failed",
+                  "duration": 3386,
+                  "error": {
+                    "message": "Error: page.goto: NS_ERROR_CONNECTION_REFUSED\nCall log:\n  \u001b[2m- navigating to \"http://127.0.0.1:3000/\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: NS_ERROR_CONNECTION_REFUSED\nCall log:\n  \u001b[2m- navigating to \"http://127.0.0.1:3000/\", waiting until \"load\"\u001b[22m\n\n    at D:\\Video\\Alexusadays\\Learn Playwright for QA Automation\\LearnPlaywright\\tests\\login.spec.js:6:16",
+                    "location": {
+                      "file": "D:\\Video\\Alexusadays\\Learn Playwright for QA Automation\\LearnPlaywright\\tests\\login.spec.js",
+                      "column": 16,
+                      "line": 6
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 4 |\u001b[39m     \u001b[90m// await page.goto('https://the-internet.herokuapp.com/login');\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 5 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mpause()\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m   |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 7 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#username'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[0m\n\u001b[0m \u001b[90m 8 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#username'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'tomsmith'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 9 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#password'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Video\\Alexusadays\\Learn Playwright for QA Automation\\LearnPlaywright\\tests\\login.spec.js",
+                        "column": 16,
+                        "line": 6
+                      },
+                      "message": "Error: page.goto: NS_ERROR_CONNECTION_REFUSED\nCall log:\n  \u001b[2m- navigating to \"http://127.0.0.1:3000/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 4 |\u001b[39m     \u001b[90m// await page.goto('https://the-internet.herokuapp.com/login');\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 5 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mpause()\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m   |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 7 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#username'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[0m\n\u001b[0m \u001b[90m 8 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#username'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'tomsmith'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 9 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#password'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[0m\n\n\u001b[2m    at D:\\Video\\Alexusadays\\Learn Playwright for QA Automation\\LearnPlaywright\\tests\\login.spec.js:6:16\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-06-01T07:26:20.557Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\Video\\Alexusadays\\Learn Playwright for QA Automation\\LearnPlaywright\\test-results\\login-This-is-a-login-test-smoke-regression-firefox\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\Video\\Alexusadays\\Learn Playwright for QA Automation\\LearnPlaywright\\test-results\\login-This-is-a-login-test-smoke-regression-firefox\\video.webm"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Video\\Alexusadays\\Learn Playwright for QA Automation\\LearnPlaywright\\tests\\login.spec.js",
+                    "column": 16,
+                    "line": 6
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "badc1754af1944f68b2b-779f45d17f2903f9a0d7",
+          "file": "login.spec.js",
+          "line": 3,
+          "column": 6
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2024-06-01T07:26:19.928Z",
+    "duration": 38355.782,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

@@ -9,13 +9,13 @@ const config = {
   testDir: './tests',
   /* Maximum time one test can run for. */
   // in milliseconds, so this is 50 seconds
-  timeout: 50 * 1000,
+  timeout: 10 * 1000,
   expect: {
     /**
      * Maximum time expect() should wait for the condition to be met.
      * For example in `await expect(locator).toHaveText();`
      */
-    timeout: 50000,
+    timeout: 5000,
   },
   /* Run all tests in parallel */
   fullyParallel: true,
@@ -27,7 +27,6 @@ const config = {
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
-    ['html'],
     ['list'],
     ['json', {  outputFile: 'test-results.json' }]
   ],
@@ -47,7 +46,7 @@ const config = {
       name: 'chromium',
       use: {
         browserName: 'chromium',
-        headless: true,
+        headless: false,
         screenshot: 'only-on-failure',
         video: 'retain-on-failure',
         baseURL: 'https://example.com',
@@ -58,10 +57,10 @@ const config = {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
     },
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
+    // {
+    //   name: 'webkit',
+    //   use: { ...devices['Desktop Safari'] },
+    // },
   ],
   /* Run your local dev server before starting the tests */
   // webServer: {
